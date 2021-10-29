@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { registerLocaleData } from '@angular/common';
-import localeFr from '@angular/common/locales/fr';
+
 
 @Component({
   selector: 'app-root',
@@ -14,6 +13,8 @@ export class AppComponent {
   percent: number = 0.234;
   salary: number = 1234.5;
   date: Date = new Date();
+
+  language: string = '';
 
   promise = new Promise<string>((resolve)=> {
     setTimeout(()=> {

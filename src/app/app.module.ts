@@ -1,9 +1,11 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
-import locales from '@angular/common/locales/es-CL';
+import locales from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
 
 registerLocaleData(locales);
+registerLocaleData(localeFr);
 
 
 import { AppComponent } from './app.component';
@@ -18,7 +20,7 @@ import { AppComponent } from './app.component';
   providers: [
     { 
       provide: LOCALE_ID, 
-      useValue: 'es-CL' 
+      useValue: 'es' 
     }
   ],
   bootstrap: [AppComponent]

@@ -17,90 +17,109 @@
           <td>uppercase</td>
           <td>{{ name | uppercase }}</td>
         </tr>
+
         <tr>
           <td>{{ name }}</td>
           <td>lowercase</td>
           <td>{{ name | lowercase }}</td>
         </tr>
+
         <tr>
           <td>{{ name }}</td>
           <td>slice:3</td>
           <td>{{ name | slice:3 }}</td>
         </tr>
+
         <tr>
           <td>{{ name }}</td>
           <td>slice:0:3</td>
           <td>{{ name | slice:0:3 }}</td>
         <tr>
-          <td>{{ arr }}</td>
-          <td>slice:1:5</td>
-          <td>{{ arr | slice:1:5 }}</td>
-        </tr>
+
         <tr>
           <td>{{ arr }}</td>
           <td>slice:1:5</td>
           <td>{{ arr | slice:1:5 }}</td>
         </tr>
+
+        <tr>
+          <td>{{ arr }}</td>
+          <td>slice:1:5</td>
+          <td>{{ arr | slice:1:5 }}</td>
+        </tr>
+
         <tr>
           <td>{{ PI }}</td>
           <td>number:'1.0-0</td>
           <td>{{ PI | number:'1.0-0' }}</td>
         </tr>
+
         <tr>
           <td>{{ PI }}</td>
           <td>number:'3.0-0'</td>
           <td>{{ PI | number:'3.0-0' }}</td>
         </tr>
+
         <tr>
           <td>{{ PI }}</td>
           <td>number:'3.0-0'</td>
           <td>{{ PI | number:'.0-2' }}</td>
         </tr>
+
         <tr>
           <td>{{ percent }}</td>
           <td>percent</td>
           <td>{{ percent| percent }}</td>
         </tr>
+
         <tr>
           <td>{{ percent }}</td>
           <td>percent:'2.2-2'</td>
           <td>{{ percent| percent:'2.2-2' }}</td>
         </tr>
+
         <tr>
           <td>{{ salary }}</td>
           <td>currency</td>
           <td>{{ salary | currency }}</td>
+        </tr>
           <!-- iso4217 -->
         <tr>
           <td>{{ salary }}</td>
           <td>currency:'EUR'</td>
           <td>{{ salary | currency:'EUR' }}</td>
         </tr>
+
         <tr>
           <td>{{ salary }}</td>
           <td>currency:'CLP':'symbol-narrow':'.0-0'</td>
           <td>{{ salary | currency:'CLP':'symbol-narrow':'.0-0' }}</td>
         </tr>
+
         <tr>
           <td>{{ salary }}</td>
           <td>currency:'CLP':'symbol-narrow':'.0-0'</td>
           <td>{{ salary | currency:'CLP':'symbol-narrow':'.0-0' }}</td>
         </tr>
+
         <tr>
           <td>{{ promise }}</td>
           <td>async</td>
           <td>{{ promise | async }}</td>
         </tr>
+
         <tr>
           <td>{{ date }}</td>
           <td>date</td>
           <td>{{ date | date }}</td>
         </tr>
+
         <tr>
           <td>{{ date }}</td>
           <td>date:'medium'</td>
           <td>{{ date | date:'medium' }}</td>
         </tr>
+
         <tr>
           <td>{{ date }}</td>
           <td>date:'short'</td>
@@ -109,8 +128,37 @@
         <!-- fecha personalizada -->
         <tr>
           <td>{{ date }}</td>
-          <td>date | date:'MMMM - dd'</td>
+          <td>date:'MMMM - dd'</td>
           <td>{{ date | date:'MMMM - dd' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'dd - MMMM'</td>
+          <td>{{ date | date:'dd - MMMM' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'dd - MMMM':'':'en'</td>
+          <td>{{ date | date:'dd - MMMM':'':'en' }} (en Inglés)</td>
+        </tr>
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'dd - MMMM':'':'fr'</td>
+          <td>{{ date | date:'dd - MMMM':'':'fr' }} (en Francés)</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'MMMM - dd':'':'{{language}}'
+            <br>
+            <button (click)="language='es'" class="ms-1 btn btn-primary">Español</button>
+            <button (click)="language='en'" class="ms-1 btn btn-secondary">Inglés</button>
+            <button (click)="language='fr'" class="ms-1 btn btn-success">Francés</button>
+          </td>
+
+          <td>{{ date | date:'MMMM -dd':'':language }} (en {{language}} )</td>
         </tr>
 
 
