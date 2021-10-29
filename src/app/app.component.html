@@ -19,6 +19,12 @@
         </tr>
 
         <tr>
+          <td>{{ myName }}</td>
+          <td>capitalizade (personalized pipe)</td>
+          <td>{{ myName | capitalizade:true }}</td>
+        </tr>
+
+        <tr>
           <td>{{ name }}</td>
           <td>lowercase</td>
           <td>{{ name | lowercase }}</td>
@@ -161,12 +167,21 @@
           <td>{{ date | date:'MMMM -dd':'':language }} (en {{language}} )</td>
         </tr>
 
+        <tr>
+          <td>{{ name }}</td>
+          <td>password: {{activate}}
+            <br>
+            <button (click)="activate = !activate" class="btn btn-outline-primary">Activate/deactivate</button>
+          </td>
+          <td>{{name | password:activate}}</td>
+        </tr>
+        
 
       </tbody>
 
     </table>
     <!-- slice de un arr -->
-    <h3>Slice</h3>
+    <h3>Slice:5:20</h3>
     <ul>
       <li *ngFor="let item of arr | slice:5:20">{{ item }}</li>
     </ul>
@@ -185,6 +200,21 @@
 
       </div>
     </div>
+    <h3>Domseguro</h3>
+      <hr>
+      <div class="row mb-5">
+        <div class="col">
+          <iframe 
+          width="560" 
+          height="315" 
+          [src]="videoUrl | domseguro" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+        </div>
+
+      </div>
+    
 
     
   </div>
