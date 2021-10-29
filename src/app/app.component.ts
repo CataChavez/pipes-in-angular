@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = 'Angular';
-
   arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   PI: number = Math.PI;
-
   percent: number = 0.234;
-
   salary: number = 1234.5;
+  date: Date = new Date();
 
   promise = new Promise<string>((resolve)=> {
     setTimeout(()=> {
@@ -22,8 +21,7 @@ export class AppComponent {
     }, 4000);
   })
 
-  heroe = 
-  {
+  heroe = {
     name: 'logan',
     keyName: 'Wolverine',
     age: 500,
@@ -32,4 +30,5 @@ export class AppComponent {
       number:20
     }
   }
+  
 }

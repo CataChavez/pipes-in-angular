@@ -91,6 +91,27 @@
           <td>async</td>
           <td>{{ promise | async }}</td>
         </tr>
+        <tr>
+          <td>{{ date }}</td>
+          <td>date</td>
+          <td>{{ date | date }}</td>
+        </tr>
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'medium'</td>
+          <td>{{ date | date:'medium' }}</td>
+        </tr>
+        <tr>
+          <td>{{ date }}</td>
+          <td>date:'short'</td>
+          <td>{{ date | date:'short' }}</td>
+        </tr>
+        <!-- fecha personalizada -->
+        <tr>
+          <td>{{ date }}</td>
+          <td>date | date:'MMMM - dd'</td>
+          <td>{{ date | date:'MMMM - dd' }}</td>
+        </tr>
 
 
       </tbody>
