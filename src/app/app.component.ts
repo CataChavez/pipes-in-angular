@@ -16,6 +16,12 @@ export class AppComponent {
 
   salary: number = 1234.5;
 
+  promise = new Promise<string>((resolve)=> {
+    setTimeout(()=> {
+      resolve('Data Arrived');
+    }, 4000);
+  })
+
   heroe = 
   {
     name: 'logan',
